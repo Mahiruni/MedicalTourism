@@ -1,0 +1,4 @@
+import { PageHero } from '@/components/page-hero';
+export const metadata={title:'Care Abroad'};
+const places=[['India','Complex care'],['Turkey','Surgery + diagnostics'],['Thailand','Planned treatment'],['Germany','Advanced specialist review']];
+export default function Outbound(){return <><PageHero eyebrow="Outbound care" title="Go abroad with a plan." text="We help Ethiopian and regional patients organize provider options, travel and continuity of care."/><section className="section"><div className="shell"><div className="sectionHead compact"><span className="eyebrow">Destinations</span><h2>Options, not assumptions.</h2></div><div className="destinationGrid">{places.map(([country,note],i)=><article key={country}><span>0{i+1}</span><h3>{country}</h3><p>{note}</p></article>)}</div></div></section></>}
