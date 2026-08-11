@@ -1,0 +1,4 @@
+import { PageHero } from '@/components/page-hero';
+export const metadata={title:'How it works'};
+const steps=[['Share','Tell us the treatment need and where you are.'],['Organize','We structure records and practical questions.'],['Review','Provider options and logistics are compared.'],['Travel','Appointments, arrival and stay are coordinated.'],['Follow up','Your next-care plan is organized before you leave.']];
+export default function Journey(){return <><PageHero eyebrow="Patient journey" title="A calmer path through complexity." text="One coordinator. Clear stages. Fewer loose ends."/><section className="section"><div className="shell timeline">{steps.map(([a,b],i)=><article key={a}><span>{String(i+1).padStart(2,'0')}</span><div><h2>{a}</h2><p>{b}</p></div></article>)}</div></section></>}
