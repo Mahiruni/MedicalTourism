@@ -1,35 +1,55 @@
-# TenaBridge Medical Tourism Website
+# TenaBridge Medical Tourism — Next.js
 
-A premium, static, multi-page medical tourism website designed for an Ethiopian company serving **inbound** and **outbound** patients.
+A modern Next.js App Router website for an Ethiopian medical tourism company supporting both **inbound care in Ethiopia** and **outbound treatment abroad**.
 
-## Pages
-- `index.html` — dual-path homepage
-- `inbound.html` — international patients coming to Ethiopia
-- `outbound.html` — Ethiopian/regional patients travelling abroad
-- `treatments.html` — specialties
-- `journey.html` — interactive patient journey
-- `hospitals.html` — verification-first hospitals/doctors system
-- `stories.html` — responsible testimonial framework
-- `about.html` — mission/team placeholders
-- `contact.html` — multi-step consultation form
-- `resources.html` — SEO/resource hub
+## Stack
 
-## Production configuration
-1. In `app.js`, set `CONFIG.whatsappNumber` to the verified company WhatsApp number using international digits only.
-2. Replace `consultationEmail` with the real business email.
-3. Connect the consultation form to a secure backend/CRM. Do **not** send sensitive medical records through ordinary email.
-4. Replace all demo/placeholder doctor, hospital, partnership, certification and testimonial content only with verified, consented information.
-5. Replace remote prototype photography with licensed production assets. The current images are layout/prototype references.
-6. Add a privacy policy, cookie policy, patient consent terms, data-retention policy and jurisdiction-specific medical-tourism disclosures before production.
+- Next.js 16
+- React 19
+- TypeScript
+- App Router
+- Custom responsive CSS
+- Lightweight inline SVG graphics
 
-## Local preview
-Any static web server works, for example:
+## Routes
+
+- `/` — homepage
+- `/inbound` — care in Ethiopia
+- `/outbound` — treatment abroad
+- `/treatments` — treatment pathways
+- `/journey` — patient journey
+- `/about` — company positioning
+- `/contact` — consultation form
+- `/privacy` — privacy and cookie policy
+
+## Design direction
+
+The previous emerald/gold static site has been replaced with a cleaner visual system using midnight navy, periwinkle blue, coral and cool white. Typography, paragraph length and navigation copy have all been reduced for a more modern, premium feel.
+
+## Cookies
+
+The site shows a consent banner on first visit. The visitor can choose **Essential only** or **Accept**. The preference is stored locally and in the `tenabridge_consent` cookie for up to one year.
+
+No optional analytics script is currently installed.
+
+## Development
 
 ```bash
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then open `http://localhost:8000`.
+Production build:
 
-## Deployment
-This project is static and deploys directly to Vercel, Netlify, Cloudflare Pages or GitHub Pages without a build step.
+```bash
+npm run build
+npm start
+```
+
+## Before production launch
+
+- Connect the consultation form to a secure CRM or patient-intake backend.
+- Do not collect sensitive medical files through the public form.
+- Replace placeholder legal/privacy contact details with the verified company information.
+- Publish hospital partnerships, doctors, outcomes, certifications and prices only after verification.
+- Review the Privacy page against the company’s real vendors, retention practices and applicable laws.
