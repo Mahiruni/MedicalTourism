@@ -1,0 +1,3 @@
+import { PageHero } from '@/components/page-hero';
+export const metadata={title:'About'};
+export default function About(){return <><PageHero eyebrow="About TenaBridge" title="Ethiopian roots. Global reach." text="We exist to make cross-border healthcare easier to understand and easier to coordinate."/><section className="section"><div className="shell values"><article><span>01</span><h2>Clear</h2><p>Plain language. Visible next steps.</p></article><article><span>02</span><h2>Human</h2><p>Patients are people before they are cases.</p></article><article><span>03</span><h2>Responsible</h2><p>No invented outcomes, partners or guarantees.</p></article></div></section></>}
