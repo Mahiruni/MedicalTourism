@@ -1,0 +1,3 @@
+import { PageHero } from '@/components/page-hero';
+export const metadata={title:'Care in Ethiopia'};
+export default function Inbound(){return <><PageHero eyebrow="Inbound care" title="Come to Ethiopia for care." text="We coordinate the practical path around your medical provider: records, appointments, arrival and recovery."/><section className="section"><div className="shell featureRows"><article><span>01</span><h2>Before arrival</h2><p>Case organization, provider communication and travel planning.</p></article><article><span>02</span><h2>In Ethiopia</h2><p>Airport, accommodation and appointment coordination.</p></article><article><span>03</span><h2>After care</h2><p>Discharge logistics and follow-up planning.</p></article></div></section></>}
