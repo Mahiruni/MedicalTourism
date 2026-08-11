@@ -1,5 +1,0 @@
-'use client';
-import Link from 'next/link';
-import { useEffect,useState } from 'react';
-const KEY='tenabridge-cookie-consent';
-export function CookieBanner(){const[visible,setVisible]=useState(false);useEffect(()=>setVisible(!window.localStorage.getItem(KEY)),[]);if(!visible)return null;const save=(value:'essential'|'accepted')=>{window.localStorage.setItem(KEY,JSON.stringify({value,savedAt:new Date().toISOString()}));document.cookie=`tenabridge_consent=${value}; Max-Age=31536000; Path=/; SameSite=Lax`;setVisible(false)};return <aside className="cookie" aria-label="Cookie preferences"><div><strong>Cookies, kept simple.</strong><p>We use essential cookies to make this site work. Optional analytics can be enabled with your consent.</p><Link href="/privacy">Privacy details</Link></div><div className="cookieActions"><button className="button buttonGhost" onClick={()=>save('essential')}>Essential only</button><button className="button" onClick={()=>save('accepted')}>Accept</button></div></aside>}

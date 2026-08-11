@@ -1,55 +1,57 @@
-# TenaBridge Medical Tourism — Next.js
+# TenaBridge — Next.js Medical Tourism Website
 
-A modern Next.js App Router website for an Ethiopian medical tourism company supporting both **inbound care in Ethiopia** and **outbound treatment abroad**.
+Modern Next.js App Router website for an Ethiopian inbound + outbound medical tourism company.
 
 ## Stack
-
-- Next.js 16
+- Next.js 16.2.11
 - React 19
 - TypeScript
 - App Router
-- Custom responsive CSS
-- Lightweight inline SVG graphics
+- Custom CSS + inline SVG graphics
+
+## Implemented must-haves
+1. Clear inbound vs outbound medical-travel paths
+2. Medical specialty cards with expressive SVG icons
+3. Destination cards with country flags
+4. Provider verification / Hospitals & Doctors route
+5. Five-step patient journey route
+6. Transparent cost and quote-scope messaging
+7. Concise consultation form + optional WhatsApp quick contact
+8. Cookie consent + Privacy Policy
+9. Accessibility focus states + Medical Disclaimer / emergency messaging
+10. SEO metadata, robots, web manifest + HisabTech developer attribution
 
 ## Routes
-
 - `/` — homepage
 - `/inbound` — care in Ethiopia
-- `/outbound` — treatment abroad
-- `/treatments` — treatment pathways
-- `/journey` — patient journey
-- `/about` — company positioning
-- `/contact` — consultation form
-- `/privacy` — privacy and cookie policy
+- `/outbound` — care abroad + destination flags
+- `/treatments` — specialties + medical icons
+- `/journey` — five-step patient journey
+- `/providers` — hospital/doctor verification approach
+- `/about` — company positioning + HisabTech credit
+- `/contact` — concise consultation form
+- `/privacy` — privacy/cookie policy
+- `/medical-disclaimer` — medical and emergency disclaimer
 
-## Design direction
+## Environment variables
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.example
+NEXT_PUBLIC_WHATSAPP_NUMBER=251XXXXXXXXX
+```
+`NEXT_PUBLIC_WHATSAPP_NUMBER` is optional. If omitted, the floating quick-contact button links to `/contact` instead.
 
-The previous emerald/gold static site has been replaced with a cleaner visual system using midnight navy, periwinkle blue, coral and cool white. Typography, paragraph length and navigation copy have all been reduced for a more modern, premium feel.
-
-## Cookies
-
-The site shows a consent banner on first visit. The visitor can choose **Essential only** or **Accept**. The preference is stored locally and in the `tenabridge_consent` cookie for up to one year.
-
-No optional analytics script is currently installed.
-
-## Development
-
+## Run
 ```bash
 npm install
 npm run dev
 ```
 
-Production build:
+## Production notes
+- Connect the consultation form to a secure CRM or healthcare-appropriate intake backend.
+- Do not collect clinical records through the public contact form.
+- Replace placeholder legal/entity details before launch.
+- Only publish hospitals, clinicians, certifications, patient outcomes or medical prices after verification and consent.
+- Add optional analytics only after updating cookie controls and privacy disclosures as required.
 
-```bash
-npm run build
-npm start
-```
-
-## Before production launch
-
-- Connect the consultation form to a secure CRM or patient-intake backend.
-- Do not collect sensitive medical files through the public form.
-- Replace placeholder legal/privacy contact details with the verified company information.
-- Publish hospital partnerships, doctors, outcomes, certifications and prices only after verification.
-- Review the Privacy page against the company’s real vendors, retention practices and applicable laws.
+## Development credit
+Developed by **HisabTech** — https://hisabtechnologies.com
